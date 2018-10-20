@@ -4,7 +4,7 @@ public class ResSampleData {
     private String title;
     private SampleType type;
 
-    public ResSampleData(String title, SampleType type) {
+    ResSampleData(String title, SampleType type) {
         this.title = title;
         this.type = type;
     }

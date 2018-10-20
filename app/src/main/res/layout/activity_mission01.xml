@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/base_view">
+
+        <ScrollView
+            android:id="@+id/scv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_up"/>
+        </ScrollView>
+    </HorizontalScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/base_view"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_margin="20dp">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/up_arrow"
+            android:onClick="buttonUpClicked"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:id="@+id/base"
+            android:layout_margin="20dp"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/down_arrow"
+            android:onClick="buttonDownClicked"/>
+    </LinearLayout>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/base_view">
+        <ScrollView
+            android:id="@+id/scv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_down"/>
+        </ScrollView>
+    </HorizontalScrollView>
+</RelativeLayout>

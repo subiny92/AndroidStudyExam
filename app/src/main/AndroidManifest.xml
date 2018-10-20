@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.subiny92.androidstudyexam">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,7 +23,39 @@
         <service
             android:name=".SampleService.MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".SampleConfiguringScreensWithJava.ConfiguringScreensWithJavaActivity" />
+        <activity android:name=".SampleScrollView.ScrollViewActivity" />
+        <activity android:name=".SampleMission01.Mission01Activity" />
+        <activity android:name=".SampleMission02.Mission02Activity" />
+        <activity android:name=".SampleLayoutInflater.LayoutInflaterActivity" />
+        <activity android:name=".SamplePDFView.PDFViewActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="org.subiny92.androidstudyexam.SamplePDFView.PDFViewActivity"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity android:name=".SampleParcelable.ParcelableActivity" />
+        <activity android:name=".SampleParcelable.BookListActivity" />
+        <activity android:name=".SampleParcelable.MenuActivity" />
+        <activity android:name=".SampleGestureDetector.GestureDetectorActivity" />
+        <activity android:name=".SampleKeyEvent.KeyEventActivity" />
+        <activity android:name=".SampleFocusEvent.FocusEventActivity" />
+        <activity android:name=".SampleOrientation.OrientationActivity" />
+        <activity
+            android:name=".SampleOrientation2.Orientation2Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity android:name=".SampleToast.ToastActivity" />
+        <activity android:name=".SampleSeekBar.SeekBarActivity" />
+        <activity android:name=".SampleAnimation.AnimationActivity" />
+        <activity android:name=".SampleSlideAnimation.SlideAnimationActivity"></activity>
     </application>
 
 </manifest>

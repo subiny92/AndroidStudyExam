@@ -48,14 +48,24 @@ public class MyService extends Service {
 
         Log.d(TAG, "command : " + command + ", name : " + name);
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 1; i < 6; i++) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
-            Log.d(TAG, "Waiting " + i + "seconds");
+            Log.d(TAG, "Waiting " + i + " seconds");
+
+            Intent showIntent = new Intent(MyService.this, ServiceMainActivity.class);
+            showIntent.putExtra("command", "show");
+            showIntent.putExtra("name", name + " from Service");
+            showIntent.addFlags(
+                    Intent.FLAG_ACTIVITY_NEW_TASK |
+                    Intent.FLAG_ACTIVITY_SINGLE_TOP |
+                    Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+            startActivity(showIntent);
         }
     }
 
