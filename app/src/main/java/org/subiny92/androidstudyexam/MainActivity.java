@@ -32,6 +32,7 @@ import org.subiny92.androidstudyexam.SampleSeekBar.SeekBarActivity;
 import org.subiny92.androidstudyexam.SampleService.ServiceMainActivity;
 import org.subiny92.androidstudyexam.SampleSlideAnimation.SlideAnimationActivity;
 import org.subiny92.androidstudyexam.SampleToast.ToastActivity;
+import org.subiny92.androidstudyexam.SampleTouchEvent.TouchEventActivity;
 
 import java.util.ArrayList;
 
@@ -113,9 +114,13 @@ public class MainActivity extends AppCompatActivity implements OnSampleItemClick
 //            intent = new Intent(MainActivity.this, ServiceMainActivity.class);
         }
         else if (type == SampleType.TouchEvent) {
-//            intent = new Intent(MainActivity.this, ServiceMainActivity.class);
+            intent = new Intent(MainActivity.this, TouchEventActivity.class);
         }
         else if (type == SampleType.GestureDetector) {
+
+
+
+            
             intent = new Intent(MainActivity.this, GestureDetectorActivity.class);
         }
         else if (type == SampleType.KeyEvent) {

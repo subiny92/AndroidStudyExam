@@ -55,7 +55,8 @@
         <activity android:name=".SampleToast.ToastActivity" />
         <activity android:name=".SampleSeekBar.SeekBarActivity" />
         <activity android:name=".SampleAnimation.AnimationActivity" />
-        <activity android:name=".SampleSlideAnimation.SlideAnimationActivity"></activity>
+        <activity android:name=".SampleSlideAnimation.SlideAnimationActivity" />
+        <activity android:name=".SampleTouchEvent.TouchEventActivity"></activity>
     </application>
 
 </manifest>
