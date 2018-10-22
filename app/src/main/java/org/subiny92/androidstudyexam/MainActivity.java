@@ -117,10 +117,6 @@ public class MainActivity extends AppCompatActivity implements OnSampleItemClick
             intent = new Intent(MainActivity.this, TouchEventActivity.class);
         }
         else if (type == SampleType.GestureDetector) {
-
-
-
-            
             intent = new Intent(MainActivity.this, GestureDetectorActivity.class);
         }
         else if (type == SampleType.KeyEvent) {
