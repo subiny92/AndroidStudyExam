@@ -16,6 +16,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import org.subiny92.androidstudyexam.SampleAnimation.AnimationActivity;
+import org.subiny92.androidstudyexam.SampleBoardCastReceiver.BoardCastReceiverActivity;
 import org.subiny92.androidstudyexam.SampleConfiguringScreensWithJava.ConfiguringScreensWithJavaActivity;
 import org.subiny92.androidstudyexam.SampleFocusEvent.FocusEventActivity;
 import org.subiny92.androidstudyexam.SampleGestureDetector.GestureDetectorActivity;
@@ -111,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements OnSampleItemClick
             intent = new Intent(MainActivity.this, ServiceMainActivity.class);
         }
         else if (type == SampleType.BroadCastReceiver) {
-//            intent = new Intent(MainActivity.this, ServiceMainActivity.class);
+            intent = new Intent(MainActivity.this, BoardCastReceiverActivity.class);
         }
         else if (type == SampleType.TouchEvent) {
             intent = new Intent(MainActivity.this, TouchEventActivity.class);

@@ -3,6 +3,7 @@
     package="org.subiny92.androidstudyexam">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
 
     <application
         android:allowBackup="true"
@@ -56,7 +57,15 @@
         <activity android:name=".SampleSeekBar.SeekBarActivity" />
         <activity android:name=".SampleAnimation.AnimationActivity" />
         <activity android:name=".SampleSlideAnimation.SlideAnimationActivity" />
-        <activity android:name=".SampleTouchEvent.TouchEventActivity"></activity>
+        <activity android:name=".SampleTouchEvent.TouchEventActivity" />
+        <activity android:name=".SampleBoardCastReceiver.BoardCastReceiverActivity"></activity>
+        <receiver android:name=".SampleBoardCastReceiver.SmsReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
