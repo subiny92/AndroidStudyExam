@@ -36,6 +36,7 @@ public class BoardCastReceiverActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isWork) {
                     finish();
+                    isWork = false;
                 } else {
                     Toast.makeText(BoardCastReceiverActivity.this, "자신에게 문자를 보내세요.", Toast.LENGTH_SHORT).show();
                 }
