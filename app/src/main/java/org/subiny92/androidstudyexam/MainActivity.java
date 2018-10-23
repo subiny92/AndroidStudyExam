@@ -21,9 +21,11 @@ import org.subiny92.androidstudyexam.SampleConfiguringScreensWithJava.Configurin
 import org.subiny92.androidstudyexam.SampleFocusEvent.FocusEventActivity;
 import org.subiny92.androidstudyexam.SampleGestureDetector.GestureDetectorActivity;
 import org.subiny92.androidstudyexam.SampleKeyEvent.KeyEventActivity;
+import org.subiny92.androidstudyexam.SampleKeyPad.KeyPadActivity;
 import org.subiny92.androidstudyexam.SampleLayoutInflater.LayoutInflaterActivity;
 import org.subiny92.androidstudyexam.SampleMission01.Mission01Activity;
 import org.subiny92.androidstudyexam.SampleMission02.Mission02Activity;
+import org.subiny92.androidstudyexam.SampleMission03.Mission03Activity;
 import org.subiny92.androidstudyexam.SampleOrientation.OrientationActivity;
 import org.subiny92.androidstudyexam.SampleOrientation2.Orientation2Activity;
 import org.subiny92.androidstudyexam.SamplePDFView.PDFViewActivity;
@@ -34,6 +36,7 @@ import org.subiny92.androidstudyexam.SampleService.ServiceMainActivity;
 import org.subiny92.androidstudyexam.SampleSlideAnimation.SlideAnimationActivity;
 import org.subiny92.androidstudyexam.SampleToast.ToastActivity;
 import org.subiny92.androidstudyexam.SampleTouchEvent.TouchEventActivity;
+import org.subiny92.androidstudyexam.SampleWebView.WebViewActivity;
 
 import java.util.ArrayList;
 
@@ -76,7 +79,13 @@ public class MainActivity extends AppCompatActivity implements OnSampleItemClick
         addArray("SampleSeekBar", SampleType.SeekBar);
         addArray("SampleAnimation", SampleType.Animation);
         addArray("SampleSlideAnimation", SampleType.SlideAnimation);
-
+        addArray("SampleFragment", SampleType.Fragment);
+        addArray("SampleFragmentApplications", SampleType.FragmentApplications);
+        addArray("SampleActionBarAndTab", SampleType.ActionBarAndTab);
+        addArray("SampleWebView", SampleType.WebView);
+        addArray("SampleKeyPad", SampleType.KeyPad);
+        addArray("SampleMission03", SampleType.Mission03);
+        addArray("SampleMission04", SampleType.Mission04);
     }
 
     private void addArray(String projectName, SampleType type) {
@@ -143,6 +152,27 @@ public class MainActivity extends AppCompatActivity implements OnSampleItemClick
         }
         else if (type == SampleType.SlideAnimation) {
             intent = new Intent(MainActivity.this, SlideAnimationActivity.class);
+        }
+        else if (type == SampleType.Fragment) {
+//            intent = new Intent(MainActivity.this, WebViewActivity.class);
+        }
+        else if (type == SampleType.FragmentApplications) {
+//            intent = new Intent(MainActivity.this, WebViewActivity.class);
+        }
+        else if (type == SampleType.ActionBarAndTab) {
+//            intent = new Intent(MainActivity.this, WebViewActivity.class);
+        }
+        else if (type == SampleType.WebView) {
+            intent = new Intent(MainActivity.this, WebViewActivity.class);
+        }
+        else if (type == SampleType.KeyPad) {
+            intent = new Intent(MainActivity.this, KeyPadActivity.class);
+        }
+        else if (type == SampleType.Mission03) {
+            intent = new Intent(MainActivity.this, Mission03Activity.class);
+        }
+        else if (type == SampleType.Mission04) {
+//            intent = new Intent(MainActivity.this, KeyPadActivity.class);
         }
 
         if (intent != null) {

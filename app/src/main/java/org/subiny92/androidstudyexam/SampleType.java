@@ -19,5 +19,12 @@ public enum SampleType {
     Toast,
     SeekBar,
     Animation,
-    SlideAnimation
+    SlideAnimation,
+    Fragment,
+    FragmentApplications,
+    ActionBarAndTab,
+    WebView,
+    KeyPad,
+    Mission03,
+    Mission04
 }
